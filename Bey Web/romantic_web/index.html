@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti, Melissa ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CÓDIGO PARA MÚSICA DE FONDO -->
+    <!-- Descomenta y personaliza la siguiente línea con tu canción -->
+    <!-- <audio id="background-music" loop autoplay>
+        <source src="URL_DE_TU_CANCION.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio> -->
+
+    <div class="container">
+        <!-- Sección Principal -->
+        <section id="main-section" class="main-section">
+            <div class="content-wrapper">
+                <h1 class="title">Para Ti, Melissa</h1>
+                <p class="subtitle">Un regalo especial hecho con amor ♡</p>
+                
+                <!-- Corazón Interactivo -->
+                <div class="heart-container">
+                    <div id="heart" class="heart">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50,90 C20,70 5,55 5,40 C5,25 15,15 25,15 C35,15 45,25 50,35 C55,25 65,15 75,15 C85,15 95,25 95,40 C95,55 80,70 50,90 Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <p class="heart-text">Haz clic en el corazón</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Carta de Amor (Oculta inicialmente) -->
+        <section id="love-letter-section" class="modal hidden">
+            <div class="modal-content">
+                <button id="close-letter" class="close-btn">&times;</button>
+                <div id="love-letter" class="love-letter">
+                    <h2>Mi Amor,</h2>
+                    <p>
+                        Desde el momento en que te conocí, mi mundo se iluminó de una manera que nunca creí posible. 
+                        Eres la melodía que da ritmo a mis días, la calma en mis tormentas y la razón de mi sonrisa.
+                    </p>
+                    <p>
+                        Cada momento a tu lado es un tesoro que guardo con celo. Tu risa es mi canción favorita, 
+                        tu abrazo es mi lugar seguro, y tu amor es mi mayor bendición.
+                    </p>
+                    <p>
+                        [Aquí puedes escribir tu mensaje personal, tus recuerdos favoritos, o tus promesas para el futuro. 
+                        Hazlo con el corazón, mi amor.]
+                    </p>
+                    <p>
+                        Gracias por ser tú, por tu paciencia, tu risa y tu amor incondicional. 
+                        Eres mi presente favorito y mi futuro más deseado.
+                    </p>
+                    <p>
+                        Con todo mi amor,<br>
+                        <span class="signature">[Tu Nombre]</span>
+                    </p>
+                </div>
+                <button id="next-to-gallery" class="btn-next">Ver Galería ♡</button>
+            </div>
+        </section>
+
+        <!-- Sección de Galería de Fotos (Oculta inicialmente) -->
+        <section id="photo-gallery-section" class="modal hidden">
+            <div class="modal-content gallery-modal">
+                <button id="close-gallery" class="close-btn">&times;</button>
+                <h2>Nuestros Momentos</h2>
+                <div id="photo-gallery" class="photo-gallery">
+                    <!-- Foto 1 -->
+                    <div class="gallery-item">
+                        <img src="./assets/images/placeholder-1.jpg" alt="Momento especial 1" class="gallery-image">
+                        <p class="photo-caption">Reemplaza con tu URL de imagen</p>
+                    </div>
+                    <!-- Foto 2 -->
+                    <div class="gallery-item">
+                        <img src="./assets/images/placeholder-2.jpg" alt="Momento especial 2" class="gallery-image">
+                        <p class="photo-caption">Reemplaza con tu URL de imagen</p>
+                    </div>
+                    <!-- Foto 3 -->
+                    <div class="gallery-item">
+                        <img src="./assets/images/placeholder-3.jpg" alt="Momento especial 3" class="gallery-image">
+                        <p class="photo-caption">Reemplaza con tu URL de imagen</p>
+                    </div>
+                    <!-- Foto 4 -->
+                    <div class="gallery-item">
+                        <img src="./assets/images/placeholder-4.jpg" alt="Momento especial 4" class="gallery-image">
+                        <p class="photo-caption">Reemplaza con tu URL de imagen</p>
+                    </div>
+                    <!-- Foto 5 -->
+                    <div class="gallery-item">
+                        <img src="./assets/images/placeholder-5.jpg" alt="Momento especial 5" class="gallery-image">
+                        <p class="photo-caption">Reemplaza con tu URL de imagen</p>
+                    </div>
+                    <!-- Foto 6 -->
+                    <div class="gallery-item">
+                        <img src="./assets/images/placeholder-6.jpg" alt="Momento especial 6" class="gallery-image">
+                        <p class="photo-caption">Reemplaza con tu URL de imagen</p>
+                    </div>
+                </div>
+                <button id="back-to-letter" class="btn-back">Volver a la Carta ♡</button>
+            </div>
+        </section>
+
+        <!-- Sección de Mensaje Final (Oculta inicialmente) -->
+        <section id="final-message-section" class="modal hidden">
+            <div class="modal-content">
+                <button id="close-final" class="close-btn">&times;</button>
+                <div class="final-message">
+                    <h2>Te Amo, Bey ♡</h2>
+                    <p>Cada día contigo es un regalo. Gracias por ser mi persona favorita.</p>
+                    <p class="final-text">Siempre tuyo,</p>
+                    <p class="final-signature">[Tu Nombre]</p>
+                </div>
+                <button id="restart" class="btn-restart">Empezar de Nuevo ♡</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
