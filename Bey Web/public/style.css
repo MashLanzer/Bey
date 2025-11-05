@@ -552,3 +552,223 @@ body {
         font-size: 1rem;
     }
 }
+
+
+/* ========================================
+   CONTADOR DE DÍAS ESPECIAL
+   ======================================== */
+
+.day-counter {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid var(--accent-pink);
+    border-radius: 15px;
+    display: inline-block;
+    background: rgba(255, 107, 157, 0.05);
+    box-shadow: 0 0 15px rgba(255, 107, 157, 0.2);
+    animation: fadeIn 1s ease-in;
+}
+
+.counter-text {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold-accent);
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.counter-label {
+    font-size: 1rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .day-counter {
+        padding: 15px;
+    }
+    .counter-text {
+        font-size: 2.5rem;
+    }
+    .counter-label {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* ========================================
+   EFECTO LLUVIA DE CORAZONES
+   ======================================== */
+
+.heart-rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite hacer clic a través del contenedor */
+    z-index: 999;
+    overflow: hidden;
+}
+
+.falling-heart {
+    position: absolute;
+    color: var(--accent-pink);
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(-10vh);
+    animation: fall linear infinite;
+    text-shadow: 0 0 5px rgba(255, 107, 157, 0.5);
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translateY(-10vh) rotateZ(0deg);
+    }
+    10% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) rotateZ(720deg);
+    }
+}
+
+
+/* ========================================
+   SECCIÓN DE TRANSICIÓN
+   ======================================== */
+
+.transition-modal {
+    background: var(--primary-dark);
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    max-width: 400px;
+    padding: 60px 40px;
+}
+
+.transition-modal .close-btn {
+    display: none; /* Ocultar el botón de cerrar en la transición */
+}
+
+.transition-message h2 {
+    font-size: 2rem;
+    color: var(--accent-pink);
+    margin-bottom: 15px;
+}
+
+.transition-message p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+/* Efecto de Carga (Loading Dots) */
+.loading-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+
+.loading-dots span {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: var(--accent-red);
+    border-radius: 50%;
+    display: inline-block;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1.0);
+    }
+}
+
+
+/* ========================================
+   CONTADOR DE DÍAS ESPECIAL
+   ======================================== */
+
+.day-counter {
+    margin: 0 auto 40px auto; /* Centrar y añadir margen inferior */
+    padding: 20px;
+    border: 2px solid var(--accent-pink);
+    border-radius: 15px;
+    display: block;
+    max-width: 300px; /* Limitar el ancho para que no sea demasiado grande */
+    background: rgba(255, 107, 157, 0.05);
+    box-shadow: 0 0 15px rgba(255, 107, 157, 0.2);
+    animation: fadeIn 1s ease-in;
+}
+
+.counter-text {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold-accent);
+    margin-bottom: 5px;
+    line-height: 1;
+    text-align: center; /* Asegura que el texto dentro del cuadro esté centrado */
+}
+
+.counter-label {
+    font-size: 1rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center; /* Asegura que el texto dentro del cuadro esté centrado */
+}
+
+
+/* ========================================
+   EFECTO LLUVIA DE CORAZONES
+   ======================================== */
+.heart-rain-container {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 999; overflow: hidden;
+}
+.falling-heart {
+    position: absolute; color: var(--accent-pink); font-size: 20px;
+    opacity: 0; animation: fall linear infinite;
+    text-shadow: 0 0 5px rgba(255, 107, 157, 0.5);
+}
+@keyframes fall {
+    0% { opacity: 0; transform: translateY(-10vh) rotateZ(0deg); }
+    10% { opacity: 0.8; }
+    100% { opacity: 0; transform: translateY(100vh) rotateZ(720deg); }
+}
+
+/* ========================================
+   SECCIÓN DE TRANSICIÓN
+   ======================================== */
+.transition-modal { text-align: center; max-width: 400px; }
+.transition-message h2 { font-size: 2rem; color: var(--accent-pink); margin-bottom: 15px; }
+.transition-message p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 40px; }
+.loading-dots { display: flex; justify-content: center; align-items: center; }
+.loading-dots span {
+    width: 10px; height: 10px; margin: 0 5px; background-color: var(--accent-red);
+    border-radius: 50%; animation: bounce 1.4s infinite ease-in-out both;
+}
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1.0); }
+}

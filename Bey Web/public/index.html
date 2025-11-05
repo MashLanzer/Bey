@@ -9,17 +9,20 @@
 <body>
     <!-- CÓDIGO PARA MÚSICA DE FONDO -->
     <!-- Descomenta y personaliza la siguiente línea con tu canción -->
-    <!-- <audio id="background-music" loop autoplay>
-        <source src="URL_DE_TU_CANCION.mp3" type="audio/mpeg">
+     <audio id="background-music" loop autoplay>
+        <source src="./assets/audio/until-i-found-you.mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
-    </audio> -->
+    </audio> 
 
     <div class="container">
         <!-- Sección Principal -->
         <section id="main-section" class="main-section">
             <div class="content-wrapper">
-                <h1 class="title">Para Ti, Melissa</h1>
+                <h1 class="title"><span id="typed-title"></span></h1>
+
                 <p class="subtitle">Un regalo especial hecho con amor ♡</p>
+
+
                 
                 <!-- Corazón Interactivo -->
                 <div class="heart-container">
@@ -36,6 +39,15 @@
         <!-- Sección de Carta de Amor (Oculta inicialmente) -->
         <section id="love-letter-section" class="modal hidden">
             <div class="modal-content">
+
+                            <!-- PEGAR AQUÍ -->
+            <!-- Contador de Días Especial -->
+            <div class="day-counter">
+                <p id="days-together" class="counter-text">Calculando...</p>
+                <p class="counter-label">Días Juntos</p>
+            </div>
+            <!-- FIN DEL CÓDIGO PEGADO -->
+             
                 <button id="close-letter" class="close-btn">&times;</button>
                 <div id="love-letter" class="love-letter">
                     <h2>Mi Amor,</h2>
@@ -63,6 +75,22 @@
                 <button id="next-to-gallery" class="btn-next">Ver Galería ♡</button>
             </div>
         </section>
+
+        
+
+        <!-- Sección de Transición a Galería (NUEVA) -->
+        <section id="transition-section" class="modal hidden">
+            <div class="modal-content transition-modal">
+                <div class="transition-message">
+                    <h2>Y ahora...</h2>
+                    <p>Nuestros recuerdos más especiales.</p>
+                    <div class="loading-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Sección de Galería de Fotos (Oculta inicialmente) -->
         <section id="photo-gallery-section" class="modal hidden">
@@ -119,6 +147,10 @@
             </div>
         </section>
     </div>
+
+    <!-- Librería para efecto de escritura -->
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
 
     <script src="script.js"></script>
 </body>
